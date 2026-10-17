@@ -1,0 +1,16 @@
+# Core -- everything runs with these (custody layer, detection layer, benchmarks, live demo).
+pycryptodome>=3.19
+kyber-py>=1.0
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+matplotlib>=3.7
+Pillow>=10.0
+imagehash>=4.3
+opencv-python-headless>=4.8
+# WordLlama: a small pretrained sentence-embedding model whose weights ship INSIDE the pip
+# package, so semantic matching works fully offline. Pinned because src/detection/paper_matcher.py
+# works around a file-path bug in this exact version.
+# No Windows wheel exists for Python 3.14 yet, so it is skipped there; the content branch then
+# runs on lexical + answer-key matching only (the code falls back automatically).
+wordllama==0.4.0.post1; python_version < "3.14"

@@ -1,0 +1,11 @@
+# Example input for: python -m src.demo.live_demo --chat data/examples/sample_chat.txt
+# Format: HH:MM | group | sender | message      (a photo:  HH:MM | group | sender | IMG: path)
+# Replace these lines with your own messages to test the detector on them.
+08:10 | Kota | aarav | anyone have notes for rotational mechanics?
+08:25 | Kota | meera | revising organic today, named reactions are killing me
+21:40 | Kota | user77 | full set coming tonight, genuine hai
+21:52 | Kota | user77 | two satellites P and Q in circular orbits, hP = R/3, gP/gQ = 36/25, find hQ
+21:55 | Kota | user12 | same qs aaye kya?
+22:03 | Kota | user77 | IMG: data/examples/sample_photo.jpg
+22:10 | Kota | user90 | key -> Q18-A, Q19-A, Q20-A, Q30-B
+22:30 | Kota | aarav | is this real?

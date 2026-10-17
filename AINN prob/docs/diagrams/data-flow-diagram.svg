@@ -1,0 +1,119 @@
+<svg viewBox="0 0 1260 620" xmlns="http://www.w3.org/2000/svg" style="color:#E8ECF3;background:#0A0E16;font-family:'IBM Plex Sans',Arial,sans-serif;" role="img" aria-label="Data flow diagram: nine numbered steps from air-gapped authoring through AES-256-GCM encryption, committing the paper hash to a ledger, wrapping and threshold-splitting the content key, sealing shares to stakeholder nodes, each node proving elapsed time via a Verifiable Delay Function, conditional release when both the VDF proof and TPM/TEE attestation hold, threshold reconstruction inside a TEE enclave, and final decryption to plaintext valid only during the exam window; a parallel detection layer branches off after step 3, comparing monitored channels against the committed hash independently of the remaining steps.">
+  <defs>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g font-family="IBM Plex Sans, sans-serif" fill="currentColor">
+
+    <!-- ROW 1: steps 1-5 -->
+    <g stroke="#2E5AAC" stroke-width="1.6" fill="none">
+      <rect x="24" y="90" width="190" height="100" rx="4"/>
+      <rect x="269" y="90" width="190" height="100" rx="4"/>
+      <rect x="514" y="90" width="190" height="100" rx="4"/>
+      <rect x="759" y="90" width="190" height="100" rx="4"/>
+      <rect x="1004" y="90" width="190" height="100" rx="4"/>
+    </g>
+    <g font-size="12" font-weight="700" text-anchor="middle">
+      <text x="119" y="122">1 &mdash; AIR-GAPPED</text>
+      <text x="119" y="138">AUTHORING</text>
+      <text x="119" y="160" font-size="10.5" font-weight="400">paper finalized, never</text>
+      <text x="119" y="174" font-size="10.5" font-weight="400">networked</text>
+
+      <text x="364" y="122">2 &mdash; AES-256-GCM</text>
+      <text x="364" y="138">ENCRYPT</text>
+      <text x="364" y="160" font-size="10.5" font-weight="400">&rarr; ciphertext + content key K</text>
+
+      <text x="609" y="122">3 &mdash; COMMIT TO</text>
+      <text x="609" y="138">LEDGER</text>
+      <text x="609" y="160" font-size="10.5" font-weight="400">hash(paper) published,</text>
+      <text x="609" y="174" font-size="10.5" font-weight="400">timestamped</text>
+
+      <text x="854" y="122">4 &mdash; WRAP &amp;</text>
+      <text x="854" y="138">SPLIT KEY</text>
+      <text x="854" y="160" font-size="10.5" font-weight="400">ML-KEM wrap &rarr; t-of-n</text>
+      <text x="854" y="174" font-size="10.5" font-weight="400">shares</text>
+
+      <text x="1099" y="122">5 &mdash; SEAL TO</text>
+      <text x="1099" y="138">STAKEHOLDER NODES</text>
+      <text x="1099" y="160" font-size="10.5" font-weight="400">each share bound to</text>
+      <text x="1099" y="174" font-size="10.5" font-weight="400">TPM+TEE state</text>
+    </g>
+
+    <!-- ROW 2: steps 6-9 -->
+    <g stroke-width="1.6" fill="none">
+      <rect x="24" y="340" width="250" height="100" rx="4" stroke="#2E5AAC"/>
+      <rect x="334" y="340" width="250" height="100" rx="4" stroke="#A8620F" stroke-width="2.2"/>
+      <rect x="644" y="340" width="250" height="100" rx="4" stroke="#2E5AAC"/>
+    </g>
+    <g stroke="#A8620F" stroke-width="2.4" fill="#A8620F" fill-opacity="0.08">
+      <rect x="954" y="340" width="250" height="100" rx="4"/>
+    </g>
+    <g font-size="12" font-weight="700" text-anchor="middle">
+      <text x="149" y="372">6 &mdash; VDF TIME PROOF</text>
+      <text x="149" y="394" font-size="10.5" font-weight="400">each node proves the window</text>
+      <text x="149" y="408" font-size="10.5" font-weight="400">has genuinely elapsed</text>
+
+      <text x="459" y="372">7 &mdash; CONDITIONAL RELEASE</text>
+      <text x="459" y="394" font-size="10.5" font-weight="400">VDF proof + TPM/TEE attestation</text>
+      <text x="459" y="408" font-size="10.5" font-weight="400">both hold &rarr; share released</text>
+
+      <text x="769" y="372">8 &mdash; THRESHOLD</text>
+      <text x="769" y="388">RECONSTRUCTION</text>
+      <text x="769" y="410" font-size="10.5" font-weight="400">t-of-n shares combine inside TEE</text>
+
+      <text x="1079" y="372">9 &mdash; DECRYPT</text>
+      <text x="1079" y="394" font-size="10.5" font-weight="400">plaintext paper &mdash; exists only</text>
+      <text x="1079" y="408" font-size="10.5" font-weight="400">for the exam window</text>
+    </g>
+
+    <!-- parallel detection branch -->
+    <g stroke="#2E5AAC" stroke-width="1.6" fill="none">
+      <rect x="369" y="500" width="520" height="90" rx="4"/>
+    </g>
+    <g font-size="12.5" font-weight="700" text-anchor="middle">
+      <text x="629" y="530">PARALLEL &mdash; DETECTION LAYER</text>
+      <text x="629" y="550" font-size="10.5" font-weight="400">scores monitored channels vs. committed hash &rarr; alert,</text>
+      <text x="629" y="564" font-size="10.5" font-weight="400">independent of steps 4&ndash;9</text>
+    </g>
+
+    <!-- row1 sequential arrows -->
+    <g stroke="currentColor" stroke-width="1.4" opacity="0.75" fill="none">
+      <line x1="214" y1="140" x2="266" y2="140" marker-end="url(#arrow3)"/>
+      <line x1="459" y1="140" x2="511" y2="140" marker-end="url(#arrow3)"/>
+      <line x1="704" y1="140" x2="756" y2="140" marker-end="url(#arrow3)"/>
+      <line x1="949" y1="140" x2="1001" y2="140" marker-end="url(#arrow3)"/>
+    </g>
+    <g font-size="10.5" font-style="italic" opacity="0.8" text-anchor="middle">
+      <text x="240" y="128">plaintext</text>
+      <text x="485" y="128">hash(paper)</text>
+      <text x="730" y="128">K (content key)</text>
+      <text x="975" y="128">share&#8339; (t-of-n)</text>
+    </g>
+
+    <!-- wrap connector row1 -> row2 -->
+    <g stroke="currentColor" stroke-width="1.4" opacity="0.75" fill="none">
+      <polyline points="1099,190 1099,265 149,265 149,337" marker-end="url(#arrow3)"/>
+    </g>
+    <text x="624" y="255" font-size="10.5" font-style="italic" opacity="0.8" text-anchor="middle">sealed share + attestation request</text>
+
+    <!-- row2 sequential arrows -->
+    <g stroke="currentColor" stroke-width="1.4" opacity="0.75" fill="none">
+      <line x1="274" y1="390" x2="331" y2="390" marker-end="url(#arrow3)"/>
+      <line x1="584" y1="390" x2="641" y2="390" marker-end="url(#arrow3)"/>
+      <line x1="894" y1="390" x2="951" y2="390" marker-end="url(#arrow3)"/>
+    </g>
+    <g font-size="10" font-style="italic" opacity="0.8" text-anchor="middle">
+      <text x="302" y="378">VDF proof</text>
+      <text x="612" y="378">share&#8339; released</text>
+      <text x="922" y="378">K reconstructed</text>
+    </g>
+
+    <!-- dashed ground-truth branch, routed through the row2 gutter to avoid crossing boxes -->
+    <g stroke="#8A5049" stroke-width="1.4" stroke-dasharray="4,3" fill="none" opacity="0.9">
+      <line x1="609" y1="190" x2="609" y2="497" marker-end="url(#arrow3)"/>
+    </g>
+    <text x="616" y="470" font-size="10.5" font-style="italic" fill="#8A5049">hash(paper) &mdash; ground truth</text>
+
+  </g>
+</svg>

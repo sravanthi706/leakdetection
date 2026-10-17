@@ -1,0 +1,407 @@
+{
+ "description": "Hand-written paraphrases of REAL JEE Advanced 2023 questions, in the two ways leaked questions actually get rewritten: (1) a clean English paraphrase that keeps the meaning but changes the wording, (2) a Hinglish/shorthand student retype, often with the answer attached. Used ONLY as an evaluation set for the content matcher and to generate hard 'paraphrased leak' sessions -- no model is trained on it.",
+ "annotator": "Written by an AI assistant (Claude) acting as annotator, from the question text in JEEBench. Not collected from any real leak channel.",
+ "source_questions": "JEEBench (Arora et al., EMNLP 2023, MIT licence)",
+ "items": [
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q1",
+   "style": "paraphrase_en",
+   "text": "S is the union of the open intervals (0,1), (1,2) and (3,4), and T is the set {0,1,2,3}. Decide which claims about functions from S into T hold: infinitely many functions, infinitely many strictly increasing ones, at most 120 continuous ones, every continuous one differentiable."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q1",
+   "style": "student_hinglish",
+   "text": "bhai Q1 wala - S = (0,1) U (1,2) U (3,4), T = {0,1,2,3}, S se T functions kitne, continuous wale 120 se kam? ans ACD confirm"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q2",
+   "style": "paraphrase_en",
+   "text": "Two different lines are tangent to both the ellipse x^2/6 + y^2/3 = 1 and the parabola y^2 = 12x. One touches the parabola at A1 and the ellipse at A2, the other touches the ellipse at A3 and the parabola at A4. Which statements about quadrilateral A1A2A3A4 and where the tangents meet the x-axis are correct?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q2",
+   "style": "student_hinglish",
+   "text": "common tangent qs - ellipse x2/6+y2/3=1 aur parabola y2=12x, quadrilateral A1A2A3A4 area 35 ya 36? tangents x axis pe (-3,0) pe milte hai kya"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q3",
+   "style": "paraphrase_en",
+   "text": "On the unit square the curve y = x^3/3 - x^2 + (5/9)x + 17/36 separates a green part above it from a red part below it. For a horizontal line at height h, for which h between 1/4 and 2/3 can the green or red areas above and below the line be equal?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q3",
+   "style": "student_hinglish",
+   "text": "f(x)=x^3/3 - x^2 + 5x/9 + 17/36 green red region wala, h between 1/4 and 2/3, area equal wale options BCD"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q4",
+   "style": "paraphrase_en",
+   "text": "f equals root n on each interval [1/(n+1), 1/n), and g is squeezed between the integral of root((1-t)/t) from x^2 to x and 2 root x. Find the limit of f(x) times g(x) as x goes to 0."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q4",
+   "style": "student_hinglish",
+   "text": "limit x->0 f(x)g(x), f = root n on [1/(n+1),1/n), g ke bounds integral se, ans 2 aata hai? option C"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q5",
+   "style": "paraphrase_en",
+   "text": "Take the unit cube whose vertices have coordinates 0 or 1. F is the set of 12 lines along face diagonals and S the set of 4 lines along main diagonals. What is the largest value of the shortest distance between a line of F and a line of S?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q5",
+   "style": "student_hinglish",
+   "text": "cube wala qs - face diagonals aur main diagonals ke beech max shortest distance, 1/root6 hai na? A"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q6",
+   "style": "paraphrase_en",
+   "text": "X is the set of integer points (x, y) with x^2/8 + y^2/20 < 1 and y^2 < 5x. Three different points of X are chosen at random. What is the probability that the triangle they form has a positive integer area?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q6",
+   "style": "student_hinglish",
+   "text": "lattice points x2/8+y2/20<1 and y2<5x, 3 random points, triangle area integer probability - option B pakka"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q7",
+   "style": "paraphrase_en",
+   "text": "The normal at a point P of the parabola y^2 = 4ax (a > 0) cuts the x-axis at Q. With F the focus, triangle PFQ has area 120. If a and the slope m of the normal are positive integers, find the pair (a, m)."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q7",
+   "style": "student_hinglish",
+   "text": "parabola y2=4ax normal wala, triangle PFQ area 120, (a,m) = (2,3) option A"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q8",
+   "style": "paraphrase_en",
+   "text": "How many real x in (-3pi/2, -pi/2) U (-pi/2, pi/2) U (pi/2, 3pi/2) satisfy root(1 + cos 2x) = root2 times arctan(tan x)?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q8",
+   "style": "student_hinglish",
+   "text": "root(1+cos2x) = root2 tan inverse(tan x) kitne solutions, answer 3"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q10",
+   "style": "paraphrase_en",
+   "text": "Write 7 5...5 7 for the (r+2)-digit number that starts and ends with 7 and has r fives in between. The sum 77 + 757 + 7557 + ... up to the term with 98 fives can be written as (the number with 99 fives + m)/n for natural numbers m, n below 3000. Find m + n."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q10",
+   "style": "student_hinglish",
+   "text": "7557 series wala sum qs, 77+757+7557..., m+n = 1219"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q11",
+   "style": "paraphrase_en",
+   "text": "Consider all values of (1967 + 1686 i sin(theta)) / (7 - 3 i cos(theta)) as theta ranges over the reals. Exactly one of them is a positive integer n. What is n?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q11",
+   "style": "student_hinglish",
+   "text": "complex no wala: (1967+1686 i sin theta)/(7-3i cos theta), ek hi positive integer n, n = 281"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q12",
+   "style": "paraphrase_en",
+   "text": "Let S be the unit vectors whose tips lie at distance 7/2 from the plane root3 x + 2y + 3z = 16. Choose three distinct vectors u, v, w in S forming an equilateral triangle and let V be the volume of the parallelepiped they span. Find 80V/root3."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q12",
+   "style": "student_hinglish",
+   "text": "plane root3x+2y+3z=16 aur unit vectors distance 7/2, parallelepiped volume V, 80V/root3 = 45"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q13",
+   "style": "paraphrase_en",
+   "text": "For nonzero real a and b, the x^5 coefficient of (a x^2 + 70/(27 b x))^4 equals the x^-5 coefficient of (a x - 1/(b x^2))^7. What is 2b?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q13",
+   "style": "student_hinglish",
+   "text": "binomial coeff wala, (ax2 + 70/27bx)^4 aur (ax - 1/bx2)^7, 2b = 3"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q18",
+   "style": "paraphrase_en",
+   "text": "A 1 kg rod of length 0.2 m lies on a smooth horizontal table, pivoted at one end. A 0.1 kg particle sliding at 5 m/s perpendicular to the rod hits it at its midpoint and bounces straight back. For an elastic collision, find the rod's angular velocity and the particle's speed afterwards."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q18",
+   "style": "student_hinglish",
+   "text": "rod pivot collision - M 1kg L 0.2m, m 0.1kg 5m/s, L/2 pe elastic, omega aur v kya aayega, A option?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q19",
+   "style": "paraphrase_en",
+   "text": "One mole of an ideal gas goes adiabatically from (T_A, V0) to (Tf, 5V0) while another mole goes isothermally from (T_B, V0) to the same final state. With heat capacity ratio gamma, what is T_A / T_B?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q19",
+   "style": "student_hinglish",
+   "text": "adiabatic vs isothermal 5V0 wala, TA/TB = 5^(gamma-1)? option A"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q20",
+   "style": "paraphrase_en",
+   "text": "Two satellites orbit the Earth (radius R) at heights h_P = R/3 and h_Q. Their gravitational accelerations are in the ratio 36 : 25. Find h_Q."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q20",
+   "style": "student_hinglish",
+   "text": "satellite qs: hP = R/3, gP/gQ = 36/25, hQ = 3R/5 hai"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q22",
+   "style": "paraphrase_en",
+   "text": "For a thin convex lens the object is 10 +- 0.1 cm away and the real image forms 20 +- 0.2 cm away. By what percentage n is the focal length uncertain?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q22",
+   "style": "student_hinglish",
+   "text": "lens error wala 10+-0.1 aur 20+-0.2 cm, focal length error n% = 1"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q23",
+   "style": "paraphrase_en",
+   "text": "A sealed vessel holds 2 mol of a monatomic ideal gas (gamma = 5/3) mixed with 1 mol of a diatomic one (gamma = 7/5). Heated at constant pressure, the mixture does 66 J of work. What is the change in its internal energy?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q23",
+   "style": "student_hinglish",
+   "text": "2 mole monoatomic + 1 mole diatomic, const pressure work 66 J, internal energy change 121 J"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q24",
+   "style": "paraphrase_en",
+   "text": "A 1.6 m tall person walks away from a 4 m lamp post at 60 cm/s. How fast does the tip of the shadow move relative to the person, in cm/s?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q24",
+   "style": "student_hinglish",
+   "text": "lamp post 4m, banda 1.6m, 60 cm/s, shadow tip speed wrt person = 40"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q30",
+   "style": "paraphrase_en",
+   "text": "When the pH drops from 7 to 2, the solubility of a sparingly soluble salt MX of a weak acid HX rises from 10^-4 to 10^-3 mol/L. Find the pKa of HX."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q30",
+   "style": "student_hinglish",
+   "text": "MX salt solubility 10^-4 se 10^-3 on pH 7 to 2, pKa = 3? B option"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q31",
+   "style": "paraphrase_en",
+   "text": "516 g of dimethyldichlorosilane reacts stoichiometrically with water to give a cyclic tetramer X in 75% yield. How many grams of X are obtained?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q31",
+   "style": "student_hinglish",
+   "text": "dimethyldichlorosilane 516 g hydrolysis tetramer 75% yield, X = 222 g"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q32",
+   "style": "paraphrase_en",
+   "text": "At 800 K and x atm, a gas with compressibility factor 0.5 has a molar volume of 0.4 dm^3/mol. If it behaved ideally under the same conditions its molar volume would be y dm^3/mol. Compute x/y."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 1#Q32",
+   "style": "student_hinglish",
+   "text": "Z = 0.5, Vm 0.4, 800K, ideal hota to y, x/y = 100"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q1",
+   "style": "paraphrase_en",
+   "text": "A differentiable function f on [1, infinity) has f(1) = 1/3 and satisfies 3 times the integral of f from 1 to x = x f(x) - x^3/3. With e the base of natural logarithms, evaluate f(e)."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q1",
+   "style": "student_hinglish",
+   "text": "3 integral f(t) = x f(x) - x^3/3 wala, f(1)=1/3, f(e) = (e^2+4)/3? C"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q2",
+   "style": "paraphrase_en",
+   "text": "A coin that shows heads with probability 1/3 is tossed until two tosses in a row match. What is the probability that the experiment ends on a head?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q2",
+   "style": "student_hinglish",
+   "text": "coin toss till 2 consecutive same, P(H)=1/3, stops with head prob = 5/21, B"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q3",
+   "style": "paraphrase_en",
+   "text": "Using principal values, add up all y with 0 < |y| < 3 that solve arctan(6y/(9 - y^2)) + arccot((9 - y^2)/(6y)) = 2pi/3."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q3",
+   "style": "student_hinglish",
+   "text": "tan inv (6y/9-y2) + cot inv (9-y2/6y) = 2pi/3 sum of solutions, 4root3 - 6, C"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q4",
+   "style": "paraphrase_en",
+   "text": "Points P, Q, R, S have position vectors i + 2j - 5k, 3i + 6j + 3k, (17/5)i + (16/5)j + 7k and 2i + j + k. Which single statement about them, on coplanarity, division ratios or cross-product magnitude, is correct?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q4",
+   "style": "student_hinglish",
+   "text": "position vectors a,b,c,d wala Q4, correct statement B"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q5",
+   "style": "paraphrase_en",
+   "text": "M is the 3 by 3 matrix whose (i, j) entry is 1 when i divides j + 1 and 0 otherwise. Which statements about M, such as invertibility or having a nonzero null vector, hold?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q5",
+   "style": "student_hinglish",
+   "text": "3x3 matrix aij = 1 if i divides j+1, statements B C sahi"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q6",
+   "style": "paraphrase_en",
+   "text": "On (0,1) define f(x) = floor(4x) (x - 1/4)^2 (x - 1/2). Which statements about where f is discontinuous or non-differentiable, and about its minimum, are correct?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q6",
+   "style": "student_hinglish",
+   "text": "greatest integer [4x](x-1/4)^2(x-1/2) wala, continuity differentiability, AB"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q7",
+   "style": "paraphrase_en",
+   "text": "S contains every twice differentiable f from R to R whose second derivative is positive on (-1, 1). For such f, X_f counts the points of (-1, 1) where f(x) = x. Which statements about the possible values of X_f are true?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q7",
+   "style": "student_hinglish",
+   "text": "f double derivative > 0 on (-1,1), fixed points X_f count wala, ABC"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q9",
+   "style": "paraphrase_en",
+   "text": "Solve (x^2 - 5) dy/dx - 2xy = -2x (x^2 - 5)^2 with y(2) = 7. What is the largest value that y(x) attains?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q9",
+   "style": "student_hinglish",
+   "text": "differential eqn (x2-5)dy/dx - 2xy = -2x(x2-5)^2, y(2)=7, max value 16"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q10",
+   "style": "paraphrase_en",
+   "text": "X is the set of five digit numbers made from the digits 1, 2, 2, 2, 4, 4, 0. A number picked uniformly from X is known to be a multiple of 5; p is the probability that it is also a multiple of 20. Find 38p."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q10",
+   "style": "student_hinglish",
+   "text": "1,2,2,2,4,4,0 se 5 digit numbers, multiple of 20 given multiple of 5, 38p = 31"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q11",
+   "style": "paraphrase_en",
+   "text": "A regular octagon A1 to A8 is inscribed in a circle of radius 2. As P moves around the circle, what is the maximum of the product PA1 times PA2 up to PA8?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q11",
+   "style": "student_hinglish",
+   "text": "octagon radius 2 circle, product PA1...PA8 max = 512"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q12",
+   "style": "paraphrase_en",
+   "text": "R is the set of 3 by 3 matrices with rows (a, 3, b), (c, 2, d), (0, 5, 0) where a, b, c, d are taken from {0, 3, 5, 7, 11, 13, 17, 19}. How many matrices in R are invertible?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q12",
+   "style": "student_hinglish",
+   "text": "matrix R me invertible kitne, a b c d from 0,3,5,7,11,13,17,19 -> 3780"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q14",
+   "style": "paraphrase_en",
+   "text": "A triangle ABC inscribed in a unit circle is obtuse, its largest and smallest angles differ by pi/2, and its sides are in arithmetic progression. If a is its area, find (64a)^2."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q14",
+   "style": "student_hinglish",
+   "text": "obtuse triangle AP sides, circumradius 1, largest - smallest angle pi/2, (64a)^2 = 1008"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q16",
+   "style": "paraphrase_en",
+   "text": "Express Young's modulus as Y = c^alpha h^beta G^gamma using the speed of light, Planck's constant and the gravitational constant. Which set of exponents is correct?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q16",
+   "style": "student_hinglish",
+   "text": "Young modulus in terms of G h c dimensions, alpha beta gamma option A"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q18",
+   "style": "paraphrase_en",
+   "text": "For an ideal gas whose molecules have n degrees of freedom, let U_n be the internal energy per mole and v_n the speed of sound. At fixed temperature and pressure, which comparison between different n is right?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q18",
+   "style": "student_hinglish",
+   "text": "degrees of freedom n, U_n aur v_n compare at same T P, option C"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q20",
+   "style": "paraphrase_en",
+   "text": "A 1 m string of mass 2 x 10^-5 kg vibrates with two consecutive harmonics at 750 Hz and 1000 Hz. What is the tension in newtons?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q20",
+   "style": "student_hinglish",
+   "text": "string 1m mass 2x10^-5 kg, harmonics 750 aur 1000 Hz, tension = 5 N"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q21",
+   "style": "paraphrase_en",
+   "text": "Sources S1 and S2 start with equal activity. When S1 has just finished its 3rd half-life and S2 its 7th, what is the ratio A1/A2 of their activities?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q21",
+   "style": "student_hinglish",
+   "text": "radioactive S1 3rd half life, S2 7th half life, same activity start, A1/A2 = 16"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q25",
+   "style": "paraphrase_en",
+   "text": "Five moles of H2S are completely oxidised by acidified potassium permanganate. If x moles of water form and y moles of electrons are transferred, find x + y."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q25",
+   "style": "student_hinglish",
+   "text": "H2S 5 mol + acidic KMnO4, water x electrons y, x+y = 18"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q26",
+   "style": "paraphrase_en",
+   "text": "Among [I3]+, [SiO4]4-, SO2Cl2, XeF2, SF4, ClF3, Ni(CO)4, XeO2F2, [PtCl4]2-, XeF4 and SOCl2, how many have an sp3 hybridised central atom?"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q26",
+   "style": "student_hinglish",
+   "text": "sp3 hybridisation count - I3+, SiO4 4-, SO2Cl2, XeF2, SF4 ... total 5"
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q28",
+   "style": "paraphrase_en",
+   "text": "50 mL of a 0.2 molal urea solution (density 1.012 g/mL at 300 K) is mixed with 250 mL of a solution containing 0.06 g of urea in the same solvent. Find the osmotic pressure of the mixture in Torr at 300 K."
+  },
+  {
+   "qid": "JEE Adv 2023 Paper 2#Q28",
+   "style": "student_hinglish",
+   "text": "urea 0.2 molal 50 mL + 250 mL with 0.06 g urea, osmotic pressure torr = 682"
+  }
+ ]
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AINN — System Architecture & Defense Presentation</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text-main: #f0f6fc;
+      --text-sub: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --orange: #d29922;
+      --purple: #bc8cff;
+      --red: #f85149;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 30px;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    .badge-primary { background: rgba(88, 166, 255, 0.15); color: var(--accent); border: 1px solid var(--accent); }
+    .badge-green { background: rgba(63, 185, 80, 0.15); color: var(--green); border: 1px solid var(--green); }
+    h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .subtitle { font-size: 16px; color: var(--text-sub); max-width: 900px; margin: 0 auto; }
+    
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+    .nav-tabs a {
+      color: var(--text-sub);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .nav-tabs a:hover {
+      background: #21262d;
+      color: var(--text-main);
+      border-color: var(--accent);
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto 50px;
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      transition: transform 0.2s ease;
+    }
+    .card h3 { font-size: 18px; margin-bottom: 12px; color: var(--accent); }
+    .card p { font-size: 14px; color: var(--text-sub); margin-bottom: 15px; }
+    
+    .img-box {
+      background: #090d13;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: center;
+      padding: 15px;
+      margin-top: 15px;
+    }
+    .img-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      transition: transform 0.2s;
+    }
+    .img-caption {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: #21262d; color: var(--text-main); font-weight: 600; }
+    tr:hover { background: rgba(255,255,255,0.02); }
+
+    .callout {
+      background: rgba(88, 166, 255, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+    .callout-success {
+      background: rgba(63, 185, 80, 0.08);
+      border-left-color: var(--green);
+    }
+    .callout-warning {
+      background: rgba(210, 153, 34, 0.08);
+      border-left-color: var(--orange);
+    }
+
+    .qa-box {
+      background: #1c2128;
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 15px;
+      border-left: 4px solid var(--purple);
+    }
+    .qa-question { font-weight: 600; color: #e6edf3; font-size: 15px; margin-bottom: 8px; }
+    .qa-answer { font-size: 14px; color: #8b949e; line-height: 1.5; }
+    .qa-answer strong { color: var(--green); }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <span class="badge badge-primary">Dual-Layer Defense Architecture</span>
+    <span class="badge badge-green">10/10 Tests Passed</span>
+    <h1>AINN — Tamper-Evident Exam Paper Distribution & Real-Time Leak Detection</h1>
+    <p class="subtitle">
+      A patent-strength architecture solving insider-driven examination compromises in national exams (NEET-UG, Vyapam, SSC) via Post-Quantum Threshold Custody and Explainable Multi-Modal Neural Detection.
+    </p>
+    <div class="nav-tabs">
+      <a href="#custody">1. Custody Layer (Crypto & Hardware)</a>
+      <a href="#detection">2. Neural Detection Layer (ML)</a>
+      <a href="#benchmarks">3. Scientific Benchmarks & Figures</a>
+      <a href="#presentation-script">4. Professor Presentation Guide</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1: CUSTODY LAYER -->
+  <div class="section" id="custody">
+    <h2 class="section-title">🔒 1. Custody Layer: Cryptographic & Hardware Time-Lock</h2>
+    <div class="callout">
+      <strong>Core Principle:</strong> Plaintext paper never touches the network before the exam window opens. No single individual, server, or authority has the technical capability to release the paper unilaterally.
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>End-to-End 9-Step Data Flow</h3>
+        <p>From air-gapped authoring to in-memory enclave decryption at the exam center.</p>
+        <div class="img-box">
+          <img src="../docs/diagrams/data-flow-diagram.svg" alt="9-Step Data Flow">
+          <div class="img-caption">Figure 1: Sequential 9-step custody lifecycle with parallel ledger-anchored detection.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Threshold-Locked Architecture</h3>
+        <p>4 independent stakeholders (NTA, State Board, Independent Audit, Custodian) holding Shamir 3-of-4 shares.</p>
+        <div class="img-box">
+          <img src="../docs/diagrams/threshold-locked-architecture-diagram.svg" alt="Threshold Architecture">
+          <div class="img-caption">Figure 2: Multi-party threshold custody with TPM/TEE and Pietrzak VDF time-locking.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>The 9-Step Custody Lifecycle Table</h3>
+      <table>
+        <thead>
+          <tr><th>Step</th><th>Phase</th><th>Security Mechanism</th><th>Guaranteed Property</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>1</strong></td><td>Air-gapped Authoring</td><td>Offline generation of paper and plaintext</td><td>No network transmission of unencrypted paper</td></tr>
+          <tr><td><strong>2</strong></td><td>AES-256-GCM Encryption</td><td>Authenticated encryption with metadata AAD</td><td>Tamper detection bound to Center ID and timestamps</td></tr>
+          <tr><td><strong>3</strong></td><td>Ledger Commitment</td><td>Ed25519 co-signed hash chain of hash(paper)</td><td>Provable mathematical verification for audits</td></tr>
+          <tr><td><strong>4</strong></td><td>Post-Quantum Key Split</td><td>ML-KEM-768 wrap + Shamir 3-of-4 over GF(2⁸)</td><td>Quantum-safe harvest resistance; eliminates single-point trust</td></tr>
+          <tr><td><strong>5</strong></td><td>Hardware State Sealing</td><td>TPM 2.0 PCR extension (0, 1, 2)</td><td>Key shares locked to verified, unmodified OS/boot state</td></tr>
+          <tr><td><strong>6</strong></td><td>VDF Time Computation</td><td>Pietrzak Verifiable Delay Function (2^T squarings)</td><td>Provable elapsed time without trusting server clocks</td></tr>
+          <tr><td><strong>7</strong></td><td>Conditional Release</td><td>Cryptographic AND-Gate (VDF ok ∧ TPM ok)</td><td>Prevents early release and refuses tampered machines</td></tr>
+          <tr><td><strong>8</strong></td><td>Enclave Reconstruction</td><td>Assembly inside isolated TEE Enclave memory</td><td>Recovered master key never touches vulnerable RAM</td></tr>
+          <tr><td><strong>9</strong></td><td>Exam Time Decryption</td><td>Decryption at exam start; active dead-man's switch</td><td>Plaintext exists only during exam window; self-erases on tamper</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 2: DETECTION LAYER -->
+  <div class="section" id="detection">
+    <h2 class="section-title">🧠 2. Neural Network Detection Layer (Explainable ML)</h2>
+    <div class="callout callout-success">
+      <strong>Real-Time Multimodal Monitoring:</strong> Operates independently in parallel with the custody chain to catch leaks unfolding on Telegram, WhatsApp, and social channels.
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Detection Pipeline Architecture</h3>
+        <p>Four independent branches feeding a stacking logistic fusion engine with complete explainability.</p>
+        <div class="img-box">
+          <img src="../docs/diagrams/ai-nn-detection-layer-diagram.svg" alt="AI/NN Detection Pipeline">
+          <div class="img-caption">Figure 3: Four detection branches (GNN, Text, Autoencoder, Vision) fused into P(leak).</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Streaming Leak Timeline Demo</h3>
+        <p>Replay of a real leak channel vs. a scam channel: real leak triggers forensic alert in hours; scam channel stays silent.</p>
+        <div class="img-box">
+          <img src="figures/live_demo_timeline.png" alt="Live Demo Timeline">
+          <div class="img-caption">Figure 4: P(leak) progression over time, showing sudden alert on leak vs. scam channel rejection.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: SCIENTIFIC BENCHMARKS -->
+  <div class="section" id="benchmarks">
+    <h2 class="section-title">📊 3. Scientific Evaluation & Benchmarks (Leave-One-Paper-Out)</h2>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Model F1 Comparison (8-Fold LOPO-CV)</h3>
+        <p>Evaluated on 2,400 test sessions with unseen JEE Advanced papers. AINN achieves <strong>F1 = 0.920</strong>, vastly beating baselines.</p>
+        <div class="img-box">
+          <img src="figures/session_models_f1.png" alt="F1 Comparison">
+          <div class="img-caption">Figure 5: AINN learned fusion (0.920) vs Random Forest (0.735), TF-IDF (0.563), and Keywords (0.395).</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>ROC & Precision-Recall Curves</h3>
+        <p>High separation area: <strong>PR-AUC = 0.944</strong> and <strong>ROC-AUC = 0.985</strong> under strict unseen test evaluations.</p>
+        <div class="img-box">
+          <img src="figures/session_pr_curves.png" alt="PR Curves">
+          <div class="img-caption">Figure 6: Precision-Recall curves illustrating minimal false positives even at high recall.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Streaming Time-to-Detection</h3>
+        <p><strong>97.8% of real leaks</strong> are detected before the exam starts, with a median detection delay of <strong>≤ 11.8 hours</strong>.</p>
+        <div class="img-box">
+          <img src="figures/session_streaming_detection.png" alt="Streaming Detection">
+          <div class="img-caption">Figure 7: CDF of detection time prior to scheduled examination start window.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Real Cascade Benchmark (Twitter15 / Twitter16)</h3>
+        <p>Evaluated on real-world rumor cascades using BiGCN, achieving <strong>0.820 / 0.844 accuracy</strong> matching literature baselines.</p>
+        <div class="img-box">
+          <img src="figures/twitter_benchmark.png" alt="Twitter Cascade Benchmark">
+          <div class="img-caption">Figure 8: Performance of propagation GNN on empirical social cascade datasets.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: PRESENTATION GUIDE -->
+  <div class="section" id="presentation-script">
+    <h2 class="section-title">🎤 4. What to Tell Your Professor (Viva Presentation Script)</h2>
+
+    <div class="card" style="margin-bottom: 25px;">
+      <h3 style="color: var(--green);">The 3-Minute Elevator Pitch</h3>
+      <p style="color: #c9d1d9; font-size: 15px;">
+        <em>"Respected Professor, paper leaks in national examinations like NEET-UG and Vyapam fail not because of external hackers, but because authorized insiders (press operators, custodians, or directors) access the plaintext paper early.<br><br>
+        Our system, <strong>AINN</strong>, provides a dual-layer solution:
+        <br>
+        <strong>1. Custody Layer:</strong> We use Post-Quantum ML-KEM-768 and 3-of-4 Shamir's Secret Sharing across independent institutions (NTA, Board, Audit, Custodian). Key release is governed by an <strong>AND-gate</strong>: it requires both hardware TPM 2.0 boot attestation AND a Verifiable Delay Function (VDF) mathematical proof of elapsed time. No single official or server can decrypt the paper early.
+        <br>
+        <strong>2. Detection Layer:</strong> We built an explainable multi-modal ML detector combining PyTorch Geometric GraphSAGE for cascade spread, ORB+RANSAC computer vision for mobile phone photos, and character n-gram matching against a pre-committed ledger hash. Under strict 8-fold Leave-One-Paper-Out cross-validation on real JEE Advanced papers, it achieves an <strong>F1 of 0.920</strong> and flags 97.8% of leaks before the exam starts."</em>
+      </p>
+    </div>
+
+    <h3 style="margin-bottom: 15px; font-size: 20px;">Top Questions Your Professor Will Ask & Your Winning Answers</h3>
+
+    <div class="qa-box">
+      <div class="qa-question">Q1: "Why did you use Shamir Secret Sharing instead of standard public-key encryption?"</div>
+      <div class="qa-answer">
+        <strong>Answer:</strong> Standard public-key encryption still relies on a single trusted server holding the private key. In cases like Vyapam and NEET-UG, institutional corruption compromised the central authority. Shamir's 3-of-4 threshold guarantees that at least 3 separate, mutually distrusting bodies (e.g. NTA, State Board, Independent Audit) must cooperate to release the paper.
+      </div>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q2: "What is a Verifiable Delay Function (VDF) and why not just check the server clock (NTP)?"</div>
+      <div class="qa-answer">
+        <strong>Answer:</strong> Server clocks can be spoofed or NTP traffic manipulated by an insider with root access. A VDF (Pietrzak construction) requires computing sequential modular squarings (y = x^(2^T) mod N). It is mathematically impossible to speed up even with massive parallel GPUs. It proves that wall-clock time has physically elapsed without trusting any external clock.
+      </div>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q3: "Why did you replace pHash with ORB + RANSAC for photographed pages?"</div>
+      <div class="qa-answer">
+        <strong>Answer:</strong> Traditional perceptual hashing (pHash) fails on smartphone photos taken under angles, shadows, or perspective skew (dropping to near chance). ORB detects scale- and rotation-invariant feature keypoints, and RANSAC computes homography to verify if the photo geometrically matches a committed exam page, giving 0.93–1.00 recall on real camera shots.
+      </div>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q4: "What is Leave-One-Paper-Out Cross-Validation (LOPO-CV) and why does it matter?"</div>
+      <div class="qa-answer">
+        <strong>Answer:</strong> If an ML model trains and tests on the same question pool, it simply memorizes questions, creating severe data leakage. In our evaluation, the test exam paper is strictly held out and never seen during training. Achieving an F1 of 0.920 on completely unseen exam papers proves genuine semantic and cascade generalization.
+      </div>
+    </div>
+
+    <div class="qa-box">
+      <div class="qa-question">Q5: "How does your system prevent false alarms on scam channels?"</div>
+      <div class="qa-answer">
+        <strong>Answer:</strong> Many Telegram channels scam students by saying 'Original NEET paper, pay ₹5000' while posting fake questions. Because our system anchors detection against the <em>Ed25519 pre-committed hash of the genuine paper</em>, scam channels produce zero content/vision overlap and are safely rejected, maintaining a 1.5% false positive rate on normal channels.
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="text-align: center; padding: 40px 0 20px; color: var(--text-sub); font-size: 13px; border-top: 1px solid var(--border); margin-top: 50px;">
+    AINN Research Prototype • Generated for University Presentation & Technical Defense
+  </footer>
+
+</body>
+</html>

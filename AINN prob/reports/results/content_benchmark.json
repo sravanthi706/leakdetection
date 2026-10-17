@@ -1,0 +1,213 @@
+{
+ "msrp": {
+  "tfidf_char_3_5": {
+   "roc_auc": 0.7550387199343556,
+   "best_threshold_acc": 0.7217391304347827
+  },
+  "tfidf_word_1_2": {
+   "roc_auc": 0.7151829807260099,
+   "best_threshold_acc": 0.7072463768115942
+  },
+  "wordllama": {
+   "roc_auc": 0.7240763478066748,
+   "best_threshold_acc": 0.7020289855072464
+  },
+  "majority_class_acc": 0.664927536231884
+ },
+ "leak_messages": {
+  "answer_key": {
+   "lexical only": {
+    "roc_auc": 0.48533519553072624,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 60
+   },
+   "semantic only": {
+    "roc_auc": 0.4818435754189944,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 60
+   },
+   "answer-key only": {
+    "roc_auc": 1.0,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 60
+   },
+   "combined": {
+    "roc_auc": 0.9999999999999999,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 60
+   },
+   "right_question_named": null
+  },
+  "excerpt": {
+   "lexical only": {
+    "roc_auc": 0.9727116458960035,
+    "recall_at_1pct_fpr": 0.8615384615384616,
+    "n_pos": 65
+   },
+   "semantic only": {
+    "roc_auc": 0.7477223893425011,
+    "recall_at_1pct_fpr": 0.35384615384615387,
+    "n_pos": 65
+   },
+   "answer-key only": {
+    "roc_auc": 0.4996508379888268,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 65
+   },
+   "combined": {
+    "roc_auc": 0.9681671680275032,
+    "recall_at_1pct_fpr": 0.7692307692307693,
+    "n_pos": 65
+   },
+   "right_question_named": 0.967741935483871
+  },
+  "hinglish (hand-written)": {
+   "lexical only": {
+    "roc_auc": 0.8386347765363128,
+    "recall_at_1pct_fpr": 0.475,
+    "n_pos": 40
+   },
+   "semantic only": {
+    "roc_auc": 0.6063547486033519,
+    "recall_at_1pct_fpr": 0.075,
+    "n_pos": 40
+   },
+   "answer-key only": {
+    "roc_auc": 0.4996508379888268,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 40
+   },
+   "combined": {
+    "roc_auc": 0.8526187150837989,
+    "recall_at_1pct_fpr": 0.3,
+    "n_pos": 40
+   },
+   "right_question_named": 1.0
+  },
+  "ocr": {
+   "lexical only": {
+    "roc_auc": 1.0,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 65
+   },
+   "semantic only": {
+    "roc_auc": 0.9910399656209712,
+    "recall_at_1pct_fpr": 0.9692307692307692,
+    "n_pos": 65
+   },
+   "answer-key only": {
+    "roc_auc": 0.4996508379888268,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 65
+   },
+   "combined": {
+    "roc_auc": 1.0,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 65
+   },
+   "right_question_named": 0.9846153846153847
+  },
+  "paraphrase (hand-written)": {
+   "lexical only": {
+    "roc_auc": 0.9436801675977653,
+    "recall_at_1pct_fpr": 0.725,
+    "n_pos": 40
+   },
+   "semantic only": {
+    "roc_auc": 0.8500174581005586,
+    "recall_at_1pct_fpr": 0.5,
+    "n_pos": 40
+   },
+   "answer-key only": {
+    "roc_auc": 0.4996508379888268,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 40
+   },
+   "combined": {
+    "roc_auc": 0.9756983240223464,
+    "recall_at_1pct_fpr": 0.7,
+    "n_pos": 40
+   },
+   "right_question_named": 1.0
+  },
+  "typed": {
+   "lexical only": {
+    "roc_auc": 0.991104426299957,
+    "recall_at_1pct_fpr": 0.9846153846153847,
+    "n_pos": 65
+   },
+   "semantic only": {
+    "roc_auc": 0.8669209282337774,
+    "recall_at_1pct_fpr": 0.5846153846153846,
+    "n_pos": 65
+   },
+   "answer-key only": {
+    "roc_auc": 0.4996508379888268,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 65
+   },
+   "combined": {
+    "roc_auc": 0.9899011602922216,
+    "recall_at_1pct_fpr": 0.9692307692307692,
+    "n_pos": 65
+   },
+   "right_question_named": 0.96875
+  },
+  "verbatim": {
+   "lexical only": {
+    "roc_auc": 1.0,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 65
+   },
+   "semantic only": {
+    "roc_auc": 1.0,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 65
+   },
+   "answer-key only": {
+    "roc_auc": 0.4996508379888268,
+    "recall_at_1pct_fpr": 0.0,
+    "n_pos": 65
+   },
+   "combined": {
+    "roc_auc": 1.0,
+    "recall_at_1pct_fpr": 1.0,
+    "n_pos": 65
+   },
+   "right_question_named": 1.0
+  },
+  "ALL leak forms": {
+   "lexical only": {
+    "roc_auc": 0.8951518854748604,
+    "recall_at_1pct_fpr": 0.745,
+    "n_pos": 400
+   },
+   "semantic only": {
+    "roc_auc": 0.8038372905027932,
+    "recall_at_1pct_fpr": 0.53,
+    "n_pos": 400
+   },
+   "answer-key only": {
+    "roc_auc": 0.5747032122905028,
+    "recall_at_1pct_fpr": 0.15,
+    "n_pos": 400
+   },
+   "combined": {
+    "roc_auc": 0.9760178072625697,
+    "recall_at_1pct_fpr": 0.8575,
+    "n_pos": 400
+   },
+   "right_question_named": 0.987012987012987
+  },
+  "false_positive_rate_at_0.5_by_negative_type": {
+   "past paper: verbatim": 0.004166666666666667,
+   "past paper: excerpt": 0.0,
+   "past paper: ocr": 0.0,
+   "past paper: typed": 0.0,
+   "past paper: paraphrase": 0.004166666666666667,
+   "past paper: answer_key": 0.0,
+   "chat / ads / scams": 0.0
+  }
+ },
+ "n_messages": 1832
+}
